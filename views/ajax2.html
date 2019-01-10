@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button id="getusers">Click Me</button>
+    <div class="" id="user">
+
+    </div>
+    <script type="text/javascript">
+    document.getElementById('getusers').addEventListener('click',getUsers);
+    function getUsers(){
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET','/data/users.json',true);
+      xhr.onload = function(){
+        if (this.status == 200)
+        {
+          console.log(xhr.responseText);
+          console.log("READYSTATE "+xhr.readyState);
+          var user = JSON.parse(xhr.responseText);
+          document.getElementById('user').innerHTML = user.name;
+        }
+      }
+
+      xhr.send();
+    };
+    </script>
+  </body>
+</html>
