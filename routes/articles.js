@@ -52,7 +52,8 @@ router.post('/add',
       } else {
         console.log(req.flash('success'));
         //console.log(res.locals.flash);
-        req.flash("success", "Article " +article._id+ " added");
+        //req.flash("success", "Article " +article._id+ " added");
+        req.flash("success", "New article successfully added");
         res.redirect('/');
       }
   } //save function
