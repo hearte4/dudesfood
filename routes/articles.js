@@ -61,7 +61,6 @@ router.post('/add',
 }// else - no erros
 });//post
 
-
 // route - update single article
 router.post('/edit/:id', function(req, res){
   let article = {};
