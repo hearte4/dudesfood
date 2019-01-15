@@ -80,8 +80,8 @@ router.get('/login',function(req, res){
 
   //console.log(user);
   res.render('login',{
-  username: 'elad@gmail.com',//req.params.username,
-  password: 'centk4Ii'//req.params.password
+  username: req.params.username, //'elad@gmail.com'
+  password: req.params.password
   });
 });
 
