@@ -34,7 +34,11 @@ router.post('/register',function(req, res){
     errors.forEach(function(error){
         req.flash("danger",error.msg);
     });
-    res.render('register');
+    res.render('register',{
+      name: req.body.name,
+      username:  req.body.username,
+      email: req.body.email
+    });
   }
  else {
    user.name =  req.body.name;

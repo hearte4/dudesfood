@@ -5,13 +5,13 @@ block content
   form(method='POST', action='/users/register')
     #form-group
       label Name:
-      input.form-control(name='name', type='text')
+      input.form-control(name='name', type='text', value=name)
     #form-group
       label Email:
-      input.form-control(name='email', type='text')
+      input.form-control(name='email', type='text', value=email)
     #form-group
       label Username:
-      input.form-control(name='username', type='text')
+      input.form-control(name='username', type='text', value=username)
     #form-group
       label password:
       input.form-control(name='password', type='password') 
