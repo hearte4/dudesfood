@@ -10,3 +10,15 @@
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
+
+.avatar
+{
+  border-radius: 50%;
+}
+
+.ingerdinets {
+     width: 1000px;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}

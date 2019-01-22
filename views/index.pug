@@ -2,10 +2,16 @@ extends layout
 
 block content
 
+    
   h1 #{title}
   != messages()
   ul.list-group
-  each article, i in articles
+  each recipe, i in recipes
     li.list-group-item
-      a(href="/articles/"+article._id)=article.title 
-      p=article.content
+      a(href="/recipes/"+recipe._id)=recipe.title
+      p.ingerdinets=recipe.ingredients 
+      if recipe.user
+        p=recipe.user.name
+        img.avatar#IdName(src="users/avatar/"+recipe.user.photo.get('filename') title=recipe.user.name alt="Image Title" height="73" width="73")
+        
+        

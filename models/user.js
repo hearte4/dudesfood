@@ -1,4 +1,5 @@
 let mongoose = require('mongoose');
+let File = require('./file');
 
 let userSchema = mongoose.Schema({
   name:{
@@ -17,6 +18,11 @@ let userSchema = mongoose.Schema({
     type: String,
     required: true
   },
+  photo:{
+        type    : mongoose.Schema.Types.ObjectId,
+        ref     : 'File',
+        required: false
+    },
 });
 
 const User = module.exports = mongoose.model('User',userSchema);

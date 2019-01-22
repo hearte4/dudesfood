@@ -1,0 +1,26 @@
+extends layout
+
+block content
+
+    h1 #{title}
+
+    form(method='POST', action='/recipes/add')
+      #form-group 
+        label.col-form-label-lg Title:
+        input.form-control(name='title', type='text')
+      //         
+           #form-group 
+              label Author:
+              input.form-control(name='author', type='text')  
+      br
+      
+      #form-group 
+        label.col-form-label-lg Ingredients:
+        textarea.form-control(name='ingredients')
+      br
+            
+      #form-group 
+        label.col-form-label-lg Directions:
+        textarea.form-control(name='process')
+        br
+      input.btn.btn-primary(type='submit', value='Submit')   

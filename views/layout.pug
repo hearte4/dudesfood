@@ -7,7 +7,7 @@ html
     link(rel='stylesheet' href='/css/style.css')
   body
     nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
-      a.navbar-brand(href='#') knowledgebas
+      a.navbar-brand(href='#') Dudes Food
       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
         span.navbar-toggler-icon
       #navbarsExampleDefault.collapse.navbar-collapse
@@ -15,20 +15,11 @@ html
         ul.navbar-nav.mr-auto
           li.nav-item.active
             a.nav-link(href='/')
-              | knowledgebas 
+              | Recipes 
               span.sr-only (current)      
-            li.nav-item
-              a.nav-link(href='/') Home
-                
             if (user)  
               li.nav-item
-                a.nav-link(href='/Articles/add') Add Article
-          li.nav-item.dropdown
-            a#dropdown01.nav-link.dropdown-toggle(href='https://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Dropdown
-            .dropdown-menu(aria-labelledby='dropdown01')
-              a.dropdown-item(href='#') Action
-              a.dropdown-item(href='#') Another action
-              a.dropdown-item(href='#') Something else here
+                a.nav-link(href='/recipes/add') Add Recipe
         form.form-inline.my-2.my-lg-0
           ul.nav.navbar-nav.navbar-right
             if user  
@@ -45,7 +36,7 @@ html
           button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
           space 
           if user
-              a.nav-link(href='/') Hello #{user.name}
+              a.nav-link(href='/users/profile') Hello #{user.name}
   .container
     br 
     br

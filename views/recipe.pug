@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  form
+    h1 #{title} 
+    h5  By #{author}
+    hr
+      
+    #form-group 
+      label.col-form-label-lg Ingredients
+      textarea.form-control(name='ingredients', rows="10" readonly)=recipe.ingredients
+    
+    br  
+    #form-group 
+      label.col-form-label-lg Directions
+      textarea.form-control(name='process', rows="10" readonly)=recipe.process
+      
+    hr
+    if user
+      if recipe.author == user.id
+        a.btn.btn-default(href='/recipes/edit/'+recipe._id) Edit
+        a.btn.btn-danger.delete-recipe(href='#',data-id=recipe._id) Delete
+        
