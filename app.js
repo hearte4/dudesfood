@@ -121,7 +121,7 @@ app.get('*', function(req, res, next){
 //Home Route
 app.get('/',function(req, res){
   Recipe.find()
-      .populate({path : 'user', populate : {path : 'photo'}}) // works
+      .populate({path : 'user', populate : {path : 'avatar'}}) // works
       .exec(function (err, recipes) {
         console.log(recipes);
         res.render('index', {

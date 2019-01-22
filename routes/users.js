@@ -168,7 +168,7 @@ function(req, res){
   User.findById(req.user._id,function(err, user){
         console.log(user);
         console.log(req.file.id);
-    user.photo = req.file.id;
+    user.avatar = req.file.id;
     //user.name ='Elad Heart';
     user.save(function(err){
       if (err) {
@@ -188,7 +188,7 @@ function(req, res){
 
 router.get('/',function(req,res){
   User.find()
-  .populate("photo")
+  .populate("avatar")
   .exec(function(err,users){
     //res.json(users);
     res.render('users.ejs',{

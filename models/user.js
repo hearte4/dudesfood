@@ -18,7 +18,7 @@ let userSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  photo:{
+  avatar:{
         type    : mongoose.Schema.Types.ObjectId,
         ref     : 'File',
         required: false

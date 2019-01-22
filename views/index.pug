@@ -12,6 +12,8 @@ block content
       p.ingerdinets=recipe.ingredients 
       if recipe.user
         p=recipe.user.name
-        img.avatar#IdName(src="users/avatar/"+recipe.user.photo.get('filename') title=recipe.user.name alt="Image Title" height="73" width="73")
+        if user
+          if  user.avatar 
+            img.avatar#IdName(src="users/avatar/"+recipe.user.avatar.get('filename') title=recipe.user.name alt="Image Title" height="73" width="73")
         
         
