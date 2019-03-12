@@ -116,8 +116,8 @@ router.get('/login',function(req, res){
 
   //console.log(user);
   res.render('login',{
-  username: /*req.params.username,*/ 'elad@gmail.com',
-  password: /*req.params.password*/ 'centk4Ii'
+  username: req.params.username, /*'elad@gmail.com'*/
+  password: req.params.password  /*'centk4Ii'*/
   });
 });
 
